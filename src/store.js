@@ -2,10 +2,7 @@ import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 import {
-    monitoring,
-    getMonitoringIsAlive,
-    monitoringIsAliveSelector,
-    getMonitoringIsAliveStateSelector
+    monitoring
 } from 'monitoring-redux-component'
 
 export default function configureStore(initialState) {
@@ -19,7 +16,7 @@ export default function configureStore(initialState) {
 
         const logger = createLogger({
             collapsed: true,
-            predicate: (getState, action) => action.type !== setCurrentTime().type
+            predicate: (getState, action) => true
         })
 
         middlewares.push(logger)
