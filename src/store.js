@@ -1,9 +1,7 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
-import {
-    monitoring
-} from 'monitoring-redux-component'
+import { monitoring } from 'monitoring-redux-component'
 
 export default function configureStore(initialState) {
     const rootReducer = combineReducers({
@@ -11,6 +9,7 @@ export default function configureStore(initialState) {
     })
     const middlewares = [thunkMiddleware]
 
+    /*
     if (process.env.NODE_ENV === 'development') {
         const { createLogger } = require('redux-logger')
 
@@ -21,9 +20,9 @@ export default function configureStore(initialState) {
 
         middlewares.push(logger)
     }
+    */
 
     const store = createStore(rootReducer, initialState, composeWithDevTools(applyMiddleware(...middlewares)))
 
-    console.log(store)
     return store
 }

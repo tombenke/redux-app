@@ -30,7 +30,7 @@ function configureStore(initialState) {
         var logger = createLogger({
             collapsed: true,
             predicate: function predicate(getState, action) {
-                return action.type !== setCurrentTime().type;
+                return true;
             }
         });
 
