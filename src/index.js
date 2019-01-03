@@ -1,3 +1,5 @@
+import configureStore from './store'
+
 // Monitoring
 import {
     monitoring,
@@ -7,6 +9,8 @@ import {
 } from 'monitoring-redux-component'
 
 module.exports = {
+    configureStore,
+
     // reducer
     monitoring,
     // action
