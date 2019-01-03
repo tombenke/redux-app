@@ -23,22 +23,18 @@ function configureStore(initialState) {
     });
     var middlewares = [_reduxThunk2.default];
 
+    /*
     if (process.env.NODE_ENV === 'development') {
-        var _require = require('redux-logger'),
-            createLogger = _require.createLogger;
-
-        var logger = createLogger({
+        const { createLogger } = require('redux-logger')
+         const logger = createLogger({
             collapsed: true,
-            predicate: function predicate(getState, action) {
-                return true;
-            }
-        });
-
-        middlewares.push(logger);
+            predicate: (getState, action) => true
+        })
+         middlewares.push(logger)
     }
+    */
 
     var store = (0, _redux.createStore)(rootReducer, initialState, (0, _reduxDevtoolsExtension.composeWithDevTools)(_redux.applyMiddleware.apply(undefined, middlewares)));
 
-    console.log(store);
     return store;
 }
