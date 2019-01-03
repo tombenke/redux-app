@@ -2,11 +2,9 @@ import expect from 'expect'
 import configureStore from './store'
 
 describe('store', () => {
-    beforeEach(() => {
-    })
+    beforeEach(() => {})
 
-    afterEach(() => {
-    })
+    afterEach(() => {})
 
     it('getStore()', () => {
         const initialState = configureStore().getState()

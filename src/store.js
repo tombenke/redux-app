@@ -8,7 +8,6 @@ import {
     getMonitoringIsAliveStateSelector
 } from 'monitoring-redux-component'
 
-
 export default function configureStore(initialState) {
     const rootReducer = combineReducers({
         monitoring

@@ -1,5 +1,5 @@
 {
-  "name": "redux-app",
+  "name": "@tombenke/redux-app",
   "description": "A redux based application",
   "version": "1.0.0",
   "tags": [
