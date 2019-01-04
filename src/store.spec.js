@@ -8,6 +8,6 @@ describe('store', () => {
 
     it('getStore()', () => {
         const initialState = configureStore().getState()
-        expect(initialState).toIncludeKey('monitoring')
+        expect(initialState).toHaveProperty('monitoring')
     })
 })
