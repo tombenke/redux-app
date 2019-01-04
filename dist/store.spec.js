@@ -17,6 +17,6 @@ describe('store', function () {
 
     it('getStore()', function () {
         var initialState = (0, _store2.default)().getState();
-        (0, _expect2.default)(initialState).toIncludeKey('monitoring');
+        (0, _expect2.default)(initialState).toHaveProperty('monitoring');
     });
 });
