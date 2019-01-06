@@ -7,7 +7,16 @@ export default function configureStore(initialState) {
     const rootReducer = combineReducers({
         monitoring
     })
-    const middlewares = [thunkMiddleware]
+    /*
+    const logger = store => next => action => {
+        console.log('redux-store:dispatching >> ', action)
+        let result = next(action)
+        console.log('redux-store:nextState >> ', store.getState())
+        return result
+    }
+    */
+
+    const middlewares = [thunkMiddleware /*, logger*/]
 
     /*
     if (process.env.NODE_ENV === 'development') {

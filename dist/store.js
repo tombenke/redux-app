@@ -21,7 +21,18 @@ function configureStore(initialState) {
     var rootReducer = (0, _redux.combineReducers)({
         monitoring: _monitoringReduxComponent.monitoring
     });
-    var middlewares = [_reduxThunk2.default];
+    var logger = function logger(store) {
+        return function (next) {
+            return function (action) {
+                console.log('redux-store:dispatching >> ', action);
+                var result = next(action);
+                console.log('redux-store:nextState >> ', store.getState());
+                return result;
+            };
+        };
+    };
+
+    var middlewares = [_reduxThunk2.default /*, logger*/];
 
     /*
     if (process.env.NODE_ENV === 'development') {
