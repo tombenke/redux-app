@@ -1,5 +1,5 @@
-s/monitoring-redux-component/redux-app/g
-s/A redux state component of monitoring features for UI components/A redux state based application/g
-s/Tamás Benke/Tamás Benke/g
-s/tombenke@gmail.com/tombenke@gmail.com/g
-s/"https:\/\/github\.com\/tombenke/"https:\/\/github\.com\/tombenke/g
+s/@tombenke/redux-app/{{package_name}}/g
+s/A redux based application/{{package_description}}/g
+s/Tamás Benke/{{author_full_name}}/g
+s/tombenke@gmail.com/{{author_email}}/g
+s/"https:\/\/github\.com\/tombenke/"https:\/\/github\.com\/{{author_github_account}}/g
