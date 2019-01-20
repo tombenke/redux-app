@@ -18,11 +18,12 @@
   "homepage": "https://github.com/tombenke/redux-app",
   "repository": {
     "type": "git",
-    "url": "http://github.com/tombenke/redux-app.git"
+    "url": "https://github.com/tombenke/redux-app.git"
   },
   "main": "dist/index.js",
   "dependencies": {
-    "monitoring-redux-component": "^1.0.5",
+    "leasot": "^7.1.0",
+    "monitoring-redux-component": "^1.0.6",
     "redux": "^3.6.0",
     "redux-actions": "^2.2.1",
     "redux-devtools-extension": "^2.13.0",
@@ -80,6 +81,7 @@
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register 'src/**/*.js'",
     "test-single": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register $1",
     "test:watch": "npm test -- --watch",
+    "todo": "leasot -x '**/*.ts' '**/*.tsx' '**/*.js' '**/*.jsx' '**.md' --ignore **/node_modules/**",
     "coverage": "NODE_ENV=test istanbul cover _mocha -- recursive --compilers js:babel-register --timeout 15000 'src/**/*.js'",
     "coveralls": "NODE_ENV=test istanbul cover _mocha --report lcovonly -- recursive --compilers js:babel-register --timeout 15000 'src/**/*.spec.js' -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "docs": "rm -fr ./docs/* && jsdoc -c ./.jsdoc.json",

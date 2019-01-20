@@ -1,4 +1,4 @@
-s/@tombenke/redux-app/{{package_name}}/g
+s/@tombenke\/redux-app/{{package_name}}/g
 s/A redux based application/{{package_description}}/g
 s/Tamás Benke/{{author_full_name}}/g
 s/tombenke@gmail.com/{{author_email}}/g

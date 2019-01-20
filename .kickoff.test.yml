@@ -1,0 +1,7 @@
+# Configuration file to generate test-redux-app via kickoff
+# kickoff -a .kickoff.test.yml -f ~/topics/redux-app/ -d test-redux-app
+package_name: test-redux-app
+package_description: A redux based application
+author_full_name: Test Author
+author_email: testauthor@gmail.com
+author_github_account: testauthor
