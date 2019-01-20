@@ -6,7 +6,7 @@ redux-app
 [![Build Status][travis-badge]][travis-url]
 [![Coveralls][BadgeCoveralls]][Coveralls]
 
-{{package_description}} 
+A redux based application
 
 ## Installation
 
